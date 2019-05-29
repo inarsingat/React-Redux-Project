@@ -1,0 +1,49 @@
+DATABASE:
+
+
+Vacations Table:
+
+vacations	CREATE TABLE `vacations` (
+  `id` int(100) NOT NULL AUTO_INCREMENT,
+  `creation_date` date NOT NULL,
+  `description` mediumtext NOT NULL,
+  `destination` varchar(100) NOT NULL,
+  `img_url` varchar(300) NOT NULL,
+  `from_date` date NOT NULL,
+  `to_date` date NOT NULL,
+  `price` int(100) NOT NULL,
+  `date_deleted` date DEFAULT NULL,
+  `update_date` date NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=100 DEFAULT CHARSET=latin1	
+
+
+Users Table:
+* In order to register user as Admin, insert manualy into the table (is_admin) Value (1)
+
+users	CREATE TABLE `users` (
+  `id` int(100) NOT NULL AUTO_INCREMENT,
+  `name` varchar(20) NOT NULL,
+  `last` varchar(20) NOT NULL,
+  `username` varchar(50) NOT NULL,
+  `password` varchar(50) NOT NULL,
+  `is_admin` tinyint(1) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=66 DEFAULT CHARSET=latin1	
+
+
+Favorites Table:
+
+users_vacations	CREATE TABLE `users_vacations` (
+  `username` varchar(100) NOT NULL,
+  `vacation_id` int(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1	
+
+
+Cookies Table:
+
+cookies	CREATE TABLE `cookies` (
+  `username` varchar(100) NOT NULL,
+  `cookie` varchar(1000) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1	
+
