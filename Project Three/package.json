@@ -16,7 +16,7 @@
     "express-fileupload": "^1.1.4",
     "express-session": "^1.16.1",
     "form-data": "^2.3.3",
-    "lodash": "^4.17.11",
+    "lodash": "^4.17.19",
     "mobx": "^5.9.4",
     "mobx-react": "^5.4.4",
     "mysql2": "^1.6.5",
